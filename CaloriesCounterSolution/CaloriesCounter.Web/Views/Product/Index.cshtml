@@ -7,10 +7,13 @@
     <input name="Calories" type="number" placeholder="Calories" />
     <button type="submit">Add</button>
 </form>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
 
 <table>
     <thead>
-        <tr><th>Name</th><th>Calories</th></tr>
+        <tr><th>Name</th><th>Calories</th><th>Actions</th></tr>
     </thead>
     <tbody>
         @foreach (var p in Model)
@@ -18,7 +21,14 @@
             <tr>
                 <td>@p.Name</td>
                 <td>@p.Calories</td>
+                <td>
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" name="id" value="@p.Id" />
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
         }
     </tbody>
 </table>
+
