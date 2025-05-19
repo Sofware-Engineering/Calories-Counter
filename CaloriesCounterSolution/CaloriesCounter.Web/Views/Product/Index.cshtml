@@ -1,0 +1,24 @@
+﻿@model List<CaloriesCounter.Entities.Product>
+
+<h2>Calories List</h2>
+
+<form asp-action="Add" method="post">
+    <input name="Name" placeholder="Product name" />
+    <input name="Calories" type="number" placeholder="Calories" />
+    <button type="submit">Add</button>
+</form>
+
+<table>
+    <thead>
+        <tr><th>Name</th><th>Calories</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Calories</td>
+            </tr>
+        }
+    </tbody>
+</table>
