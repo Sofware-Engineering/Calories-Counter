@@ -1,0 +1,135 @@
+/* calories-counter.css */
+
+/* Загальні стилі */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Контейнер форми */
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Стилі для груп полів */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+    .form-group label {
+        font-weight: 600;
+        color: #34495e;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        outline: none;
+    }
+
+/* Стилі для випадаючих списків */
+select.form-control {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="%23333" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 0.75rem center/12px 12px;
+}
+
+/* Стилі для кнопки */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    .btn-primary:active {
+        transform: translateY(0);
+    }
+
+/* Стилі для повідомлень про помилки */
+.text-danger {
+    font-size: 0.875rem;
+    color: #dc3545;
+    margin-top: 0.25rem;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 576px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+/* Стилі для _LoginPartial */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #007bff;
+    }
+
+.navbar-nav .btn-link {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+    .navbar-nav .btn-link:hover {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+@media (max-width: 576px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+        .navbar-nav .nav-item {
+            margin: 0.5rem 0;
+        }
+}

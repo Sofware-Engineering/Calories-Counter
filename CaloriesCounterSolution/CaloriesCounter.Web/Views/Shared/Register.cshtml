@@ -1,0 +1,30 @@
+﻿@page
+@model CaloriesCounter.Web.Areas.Identity.Pages.Account.RegisterModel
+@{
+    ViewData["Title"] = "Реєстрація";
+}
+<div class="container">
+    <h2>Реєстрація</h2>
+    <form method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Input.Email">Електронна пошта</label>
+            <input asp-for="Input.Email" class="form-control" />
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.Password">Пароль</label>
+            <input asp-for="Input.Password" class="form-control" />
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.ConfirmPassword">Підтвердження паролю</label>
+            <input asp-for="Input.ConfirmPassword" class="form-control" />
+            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Зареєструватися</button>
+    </form>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

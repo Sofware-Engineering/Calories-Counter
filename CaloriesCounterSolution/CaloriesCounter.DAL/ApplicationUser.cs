@@ -10,5 +10,6 @@ public class ApplicationUser : IdentityUser
     public Gender Gender { get; set; }
     public ActivityLevel ActivityLevel { get; set; }
     public Goal Goal { get; set; }
+    public bool IsApproved { get; set; }
 
 }

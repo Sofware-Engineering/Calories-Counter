@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CaloriesCounter.Core\CaloriesCounter.Core.csproj" />
     <ProjectReference Include="..\CaloriesCounter.DAL\CaloriesCounter.DAL.csproj" />
     <ProjectReference Include="..\CaloriesCounter.Entities\CaloriesCounter.Entities.csproj" />
   </ItemGroup>
