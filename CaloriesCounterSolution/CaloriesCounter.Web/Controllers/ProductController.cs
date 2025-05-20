@@ -34,5 +34,6 @@ namespace CaloriesCounter.Web.Controllers
             return RedirectToAction("Index");
         }
 
+
     }
 }

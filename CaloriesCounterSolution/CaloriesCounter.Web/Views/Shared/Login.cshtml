@@ -3,31 +3,38 @@
 @{
     ViewData["Title"] = "Вхід";
 }
-<div class="container">
-    <h2>Вхід</h2>
+
+<div class="container mt-4">
+    <h2 class="mb-3">Вхід</h2>
     <form method="post">
+        <!-- Вивід загальних помилок -->
         <div asp-validation-summary="All" class="text-danger"></div>
-        <div class="form-group">
-            <label asp-for="Input.Email">Електронна пошта</label>
+
+        <!-- Поле електронної пошти -->
+        <div class="form-group mb-3">
+            <label asp-for="Input.Email" class="form-label">Електронна пошта</label>
             <input asp-for="Input.Email" class="form-control" />
             <span asp-validation-for="Input.Email" class="text-danger"></span>
         </div>
-        <div class="form-group">
-            <label asp-for="Input.Password">Пароль</label>
-            <input asp-for="Input.Password" class="form-control" />
+
+        <!-- Поле паролю -->
+        <div class="form-group mb-3">
+            <label asp-for="Input.Password" class="form-label">Пароль</label>
+            <input asp-for="Input.Password" class="form-control" type="password" />
             <span asp-validation-for="Input.Password" class="text-danger"></span>
         </div>
-        <div class="form-group">
-            <div class="checkbox">
-                <label asp-for="Input.RememberMe">
-                    <input asp-for="Input.RememberMe" />
-                    @Html.DisplayNameFor(m => m.Input.RememberMe)
-                </label>
-            </div>
+
+        <!-- Пам'ятати мене -->
+        <div class="form-group form-check mb-3">
+            <input asp-for="Input.RememberMe" class="form-check-input" />
+            <label asp-for="Input.RememberMe" class="form-check-label">Запам’ятати мене</label>
         </div>
+
+        <!-- Кнопка входу -->
         <button type="submit" class="btn btn-primary">Увійти</button>
     </form>
 </div>
+
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
