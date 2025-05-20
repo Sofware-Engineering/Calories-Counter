@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CaloriesCounter.DAL\CaloriesCounter.DAL.csproj" />
     <ProjectReference Include="..\CaloriesCounter.Entities\CaloriesCounter.Entities.csproj" />
   </ItemGroup>

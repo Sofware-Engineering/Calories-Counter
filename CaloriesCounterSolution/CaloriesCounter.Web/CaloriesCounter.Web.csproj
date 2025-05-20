@@ -1,26 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-  <PropertyGroup>
-    <CodeAnalysisRuleSet>stylecop.ruleset</CodeAnalysisRuleSet>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.5" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CaloriesCounter.BLL\CaloriesCounter.BLL.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <AdditionalFiles Include="stylecop.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <AdditionalFiles Include="stylecop.ruleset" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Serilog" Version="4.3.0" />
   </ItemGroup>
 
 </Project>

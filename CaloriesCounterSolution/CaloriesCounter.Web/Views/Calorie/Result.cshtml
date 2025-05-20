@@ -1,0 +1,49 @@
+﻿@using CaloriesCounter.Core.Models;
+@model CalorieResult
+
+@{
+    // Допоміжний метод для перекладу днів тижня
+    string TranslateDayOfWeek(DayOfWeek day)
+    {
+        return day switch
+        {
+            DayOfWeek.Sunday => "Неділя",
+            DayOfWeek.Monday => "Понеділок",
+            DayOfWeek.Tuesday => "Вівторок",
+            DayOfWeek.Wednesday => "Середа",
+            DayOfWeek.Thursday => "Четвер",
+            DayOfWeek.Friday => "П'ятниця",
+            DayOfWeek.Saturday => "Субота",
+            _ => day.ToString()
+        };
+    }
+}
+
+<h2>Результат розрахунку</h2>
+
+<div>
+    <h4>Ваші показники:</h4>
+    <p><strong>Базовий метаболізм (BMR):</strong> @Model.BMR калорій</p>
+    <p><strong>Загальні щоденні витрати (TDEE):</strong> @Model.TDEE калорій</p>
+    <p><strong>Рекомендована щоденна норма калорій:</strong> @Model.DailyCalories калорій</p>
+    <p><strong>Тижнева норма калорій:</strong> @Model.WeeklyCalories калорій</p>
+</div>
+
+<h4>Тижневий план харчування:</h4>
+@foreach (var day in Model.WeeklyPlan)
+{
+    <h5>@TranslateDayOfWeek(day.Key)</h5>
+    <p>Калорії: @day.Value.Calories</p>
+    <p>Білки: @day.Value.Protein г</p>
+    <p>Жири: @day.Value.Fat г</p>
+    <p>Вуглеводи: @day.Value.Carbs г</p>
+    <h6>Розподіл по прийомам їжі:</h6>
+    <ul>
+        @foreach (var meal in day.Value.MealDistribution)
+        {
+            <li>@meal.Key: @meal.Value калорій</li>
+        }
+    </ul>
+}
+
+<a asp-action="Index" class="btn btn-secondary">Назад</a>

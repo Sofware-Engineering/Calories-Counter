@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaloriesCounter.DAL", "Calo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaloriesCounter.Entities", "CaloriesCounter.Entities\CaloriesCounter.Entities.csproj", "{FBE2A864-49CD-4606-9A00-AFA2FDEAADE9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaloriesCounter.Core", "CaloriesCounter.Core\CaloriesCounter.Core.csproj", "{7936221A-D816-41C6-B394-3EA00F994AC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FBE2A864-49CD-4606-9A00-AFA2FDEAADE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBE2A864-49CD-4606-9A00-AFA2FDEAADE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBE2A864-49CD-4606-9A00-AFA2FDEAADE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7936221A-D816-41C6-B394-3EA00F994AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7936221A-D816-41C6-B394-3EA00F994AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7936221A-D816-41C6-B394-3EA00F994AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7936221A-D816-41C6-B394-3EA00F994AC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
